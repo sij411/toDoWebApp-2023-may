@@ -14,18 +14,29 @@
 
     <div id="progress-bar-container"></div>
 
-    <div id="main-container">
-      <div class="left-components-container">
-        <div class="temp">1</div>
-        <div class="temp">2</div>
-      </div>
-      <div>
-        <div class="temp">3</div>
-        <div class="temp">4</div>
-      </div>
-      <div>
-        <div class="temp">5</div>
-        <div class="temp">6</div>
+    <!--main box-->
+    <div id="main-box">
+      <div id="main-container">
+        <div class="left-components-container">
+          <div id="userProfile" class="temp user-profile-container">
+            userProfile
+          </div>
+          <div id="timer" class="temp timer-container">timer</div>
+        </div>
+        <div onclick="tempNameGenerator();">
+          <div id="toDoLists" class="temp toDoLists-container">
+            <div id=temp2">
+              <input type="text">
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div>
+          <div id="weeklyPlanner" class="temp weekly-planner">weekly</div>
+          <div id="music" class="temp music-container">music</div>
+        </div>
       </div>
     </div>
   </body>

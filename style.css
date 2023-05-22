@@ -1,16 +1,32 @@
 #main-container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+}
+
+#progress-bar-container {
+  height: 50px;
+  width: 90vh;
+  margin: 10px;
+  background-color: yellow;
+}
+
+#main-box {
+  width: 90vh;
+  margin: 20px 10px 20px 10px;
+}
+
+#main-box div {
+  margin-right: 15px;
 }
 
 #main-container > div {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .temp {
-    width: 100px;
-    height: 100px;
-    background-color: violet;
-    border: 3px black dotted;
+  width: 100px;
+  height: 100px;
+  background-color: lavender;
+  border: 2px gray solid;
 }
