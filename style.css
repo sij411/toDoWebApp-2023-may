@@ -1,0 +1,16 @@
+#main-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#main-container > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.temp {
+    width: 100px;
+    height: 100px;
+    background-color: violet;
+    border: 3px black dotted;
+}
