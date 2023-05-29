@@ -10,7 +10,7 @@
     </style>
   </head>
   <body>
-    <script src="app.js"></script>
+    <script src="todo.js"></script>
 
     <div id="progress-bar-container"></div>
 
@@ -23,20 +23,22 @@
           </div>
           <div id="timer" class="temp timer-container">timer</div>
         </div>
-        <div onclick="tempNameGenerator();">
-          <div id="toDoLists" class="temp toDoLists-container">
-            <div id=temp2">
-              <input type="text">
-              </div>
+        <div id="main-toDoList-container">
+          <div id="toDoListBox" class="temp toDoLists-container">
+            <form id="todo-form">
+              <input id="b" type="text">
+            </form>
+            <ul id="toDoList">
+
+            </ul>
             </div>
-
-
           </div>
-        </div>
-        <div>
+          <div id="right-components-container">
           <div id="weeklyPlanner" class="temp weekly-planner">weekly</div>
           <div id="music" class="temp music-container">music</div>
         </div>
+        </div>
+        
       </div>
     </div>
   </body>
