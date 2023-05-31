@@ -10,7 +10,7 @@
     </style>
   </head>
   <body>
-    <script src="todo.js"></script>
+   
 
     <div id="progress-bar-container"></div>
 
@@ -24,11 +24,11 @@
           <div id="timer" class="temp timer-container">timer</div>
         </div>
         <div id="main-toDoList-container">
-          <div id="toDoListBox" class="temp toDoLists-container">
+          <div id="todo-list-box" class="temp todo-list-container">
             <form id="todo-form">
-              <input id="b" type="text">
+              <input type="text" required>
             </form>
-            <ul id="toDoList">
+            <ul id="todo-list">
 
             </ul>
             </div>
@@ -41,5 +41,8 @@
         
       </div>
     </div>
+    <script type='text/javascript' src="./todo.js"></script>
+    <!--DOM이 형성되지 않았으나 이벤트를 주어서 null 읽을 수 없다는 에러. 이렇게되면 top down 방식
+    이니까 dom이 형성된 것으로 인식하나봄-->
   </body>
 </html>
