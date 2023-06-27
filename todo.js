@@ -4,17 +4,32 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 
+const myStorage = window.localStorage;
+var idx = 0;
+
+function $(id) {
+  return document.getElementById(id);
+} // id를 반환
+
 function toDoEvent(event) {
   event.preventDefault();
   const newToDo = toDoInput.value;
   toDoInput.value = "";
   console.log("This is " + newToDo);
+  // local storage
+  myStorage.setItem(idx, newToDo);
 
+  var newMemo = myStorage.getItem(idx);
+  console.log("This is the new memo: ", newMemo);
   var newLi = document.createElement("li");
-  var newText = document.createTextNode(newToDo);
+  var newText = document.createTextNode(newMemo);
   newLi.appendChild(newText);
   var currentUl = document.getElementById("todo-list");
   currentUl.insertAdjacentElement("afterbegin", newLi);
+
+  idx = idx + 1;
 }
 
 toDoForm.addEventListener("submit", toDoEvent);
+
+// 새로고침해도 남아있게 하고 싶은데 어떻게 해야하는거지?
