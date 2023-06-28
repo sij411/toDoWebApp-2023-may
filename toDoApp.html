@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Do App</title>
+    <style>
+      /* *은 모든 요소 selector*/
+      *,
+      *::before,
+      *::after {
+        /*전체 요소에 대해 패딩, 마진 값을 초기화하고 borderbox 선언*/
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        background: #066acd;
+      }
+      .container {
+        width: 40%;
+        min-width: 450px;
+        min-height: 50px;
+        position: absolute;
+        background-color: white;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+      }
+      #newtask {
+        position: relative;
+        padding: 30px 20px; /*new task에 패딩을 주었는데 왜 container가 늘어났지? 부모라서?*/
+      }
+      #newtask input {
+        width: 75%;
+        height: 45px;
+        font-size: 20px;
+        border: 2px solid #d1d3d4;
+        border-radius: 5px;
+        padding: 12px;
+        font-weight: 500;
+        color: black;
+      }
+      #newtask input:focus {
+        outline: none;
+        border-color: #00aaf8;
+      }
+      #push {
+        width: 20%;
+        height: 45px;
+        position: relative;
+        float: right;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 30px;
+        border-radius: 5px;
+        background-color: #066acd;
+        cursor: pointer;
+      }
+      #tasks {
+        width: 100%;
+        background-color: white;
+        padding: 30px 20px;
+        position: relative;
+        margin-top: 10px;
+        border-radius: 10px;
+      }
+      .task {
+        width: 100%;
+        height: 50px;
+        padding: 6px 10px;
+        margin-bottom: 8px;
+        border-radius: 5px;
+        border: 1px solid #939697;
+        cursor: pointer;
+        display: flex; /*span과 button의 레이아웃을 플렉스로 유지*/
+        justify-content: space-between;
+        align-items: center;
+      }
+      .task span {
+        font-size: 15px;
+        font-weight: 400;
+      }
+      .task button {
+        background-color: #0a2ea4;
+        color: #ffffff;
+        height: 100%;
+        width: 40px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+      }
+    </style>
+  </head>
+</html>
+<body>
+  <div class="container">
+    <div id="newtask">
+      <input type="text" placeholder="What's your plan today?" />
+      <button id="push">+</button>
+      <!--아이콘 파일로 넣어볼까?-->
+    </div>
+    <div id="tasks"></div>
+  </div>
+
+  <script src="todo-list.js"></script>
+</body>
